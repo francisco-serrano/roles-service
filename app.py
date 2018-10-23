@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, Response
 from model import RolesNeuralNet
 
 app = Flask(__name__)
@@ -7,11 +7,11 @@ neural_net = RolesNeuralNet('model.h5')
 
 @app.route('/obtener_roles', methods=['GET'])
 def classify_ipa():
-    ipa_array_text = request.args.get('ipa_array')
+    ipa_arrays_text = request.args.get('ipa_arrays')
 
-    prediction = neural_net.make_prediction(ipa_array_text)
+    prediction = neural_net.make_prediction(ipa_arrays_text)
 
-    return jsonify(roles=prediction.tolist())
+    return Response(str(prediction), mimetype='text/plain')
 
 
 if __name__ == '__main__':
