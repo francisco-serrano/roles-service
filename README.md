@@ -3,9 +3,9 @@ Clasificador de Roles a partir de conductas IPA
 
 ### Entrada
 ```
-String con formato -> X,X,X,X,X,X,X,X,X,X,X,X
+String de 12 elementos con formato -> X,X,X,X,X,X,X,X,X,X,X,X
 ```
-donde X es un entero indicando una conducta, que va del 1 al 12
+donde X es un entero indicando las contabilizaciones de la conducta en su determinada posición
 
 
 ### Salida
