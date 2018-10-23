@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:3.6.3
 
 ENV FLASK_APP app.py
 ENV FLASK_ENV production
