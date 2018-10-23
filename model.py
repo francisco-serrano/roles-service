@@ -10,6 +10,5 @@ class RolesNeuralNet:
         ipa_array = np.array(ipa_array_text.split(','), dtype=int)
 
         prediction = self.classifier.predict(np.reshape(ipa_array, (1, 12)))
-        prediction = np.argmax(prediction) + 1
 
-        return str(prediction)
+        return prediction
